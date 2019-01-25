@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="210dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginLeft="87dp"
+        android:layout_marginRight="87dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="16dp"
+        android:text="Grade Report App"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtNum1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtNum1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginRight="84dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Number 1"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/edtNum2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <EditText
+        android:id="@+id/edtNum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginRight="84dp"
+        android:layout_marginStart="85dp"
+        android:ems="10"
+        android:hint="Number 2"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/edtNum3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNum1" />
+
+    <EditText
+        android:id="@+id/edtNum3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginRight="84dp"
+        android:layout_marginStart="85dp"
+        android:ems="10"
+        android:hint="Number 3"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btnCheckGrades"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNum2" />
+
+    <Button
+        android:id="@+id/btnCheckGrades"
+        android:layout_width="214dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginRight="85dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="4dp"
+        android:onClick="onbtnClick"
+        android:text="Check Grades"
+        app:layout_constraintBottom_toTopOf="@+id/txtTotalLbl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNum3" />
+
+    <TextView
+        android:id="@+id/txtTotalLbl"
+        android:layout_width="98dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginLeft="78dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="19dp"
+        android:text="Total:"
+        app:layout_constraintBottom_toTopOf="@+id/txtAverageLbl"
+        app:layout_constraintEnd_toStartOf="@+id/txtTotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheckGrades" />
+
+    <TextView
+        android:id="@+id/txtAverageLbl"
+        android:layout_width="97dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginLeft="78dp"
+        android:layout_marginRight="43dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="3dp"
+        android:text="Average:"
+        app:layout_constraintBottom_toTopOf="@+id/txtFinalGradeLbl"
+        app:layout_constraintEnd_toStartOf="@+id/txtAverage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalLbl" />
+
+    <TextView
+        android:id="@+id/txtFinalGradeLbl"
+        android:layout_width="95dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="37dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginRight="47dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="6dp"
+        android:text="Final Grade:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtFinalGrade"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAverageLbl" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="96dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtAverage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtTotalLbl"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheckGrades" />
+
+    <TextView
+        android:id="@+id/txtAverage"
+        android:layout_width="94dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginRight="72dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtFinalGrade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtAverageLbl"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotal" />
+
+    <TextView
+        android:id="@+id/txtFinalGrade"
+        android:layout_width="96dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="44dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtFinalGradeLbl"
+        app:layout_constraintTop_toBottomOf="@+id/txtAverage" />
+</android.support.constraint.ConstraintLayout>
